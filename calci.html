@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculator</title>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getRandomColor() {
+            // Generate a random hex color
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+                console.log(color);
+            }
+            return color;
+        }
+
+        function changeBackgroundColor() {
+            document.body.style.backgroundColor = getRandomColor();
+        }
+
+        // Change background color every 2 seconds
+        setInterval(changeBackgroundColor, 2000);
+    </script>  
+</body>
+</html>
+<body>
+    <script src="calci.js"></script>
+    <h2> Calculator</h2>
+        
+    <label for="a" class="n2">a:</label>
+    <input type="number" id="a"><br><br>
+    
+    <label for="b" class="n3">b:</label>
+    <input type="number" id="b"><br><br>
+
+    <label for="c" class="n4">c:</label>
+    <input type="number" id="c"><br><br>
+
+
+    
+    <button onclick="calculate()">Calculate </button><br><br>
+    
+    <h3 id="result"></h3>
+
+    
+</body>
+</html>
